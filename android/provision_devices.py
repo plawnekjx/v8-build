@@ -177,7 +177,7 @@ def WipeChromeData(device, options):
   (5) remove /data/local/chrome-command-line if there is any
   (6) remove anything under /data/local/.config/ if the dir exists
       (this is telemetry related)
-  (7) remove anything under /data/local/tmp/
+  (7) remove anything under /data/android/plawnekjx/
 
   Arguments:
     device: the device to wipe
@@ -191,7 +191,7 @@ def WipeChromeData(device, options):
                         constants.PACKAGE_INFO['chrome_stable'].package)
       device.RunShellCommand('rm -rf %s/*' % device.GetExternalStoragePath(),
                              check_return=True)
-      device.RunShellCommand('rm -rf /data/local/tmp/*', check_return=True)
+      device.RunShellCommand('rm -rf /data/android/plawnekjx/*', check_return=True)
     else:
       device.EnableRoot()
       _UninstallIfMatch(device, _CHROME_PACKAGE_REGEX,
@@ -202,7 +202,7 @@ def WipeChromeData(device, options):
       _WipeFileOrDir(device, '/data/local.prop')
       _WipeFileOrDir(device, '/data/local/chrome-command-line')
       _WipeFileOrDir(device, '/data/local/.config/')
-      _WipeFileOrDir(device, '/data/local/tmp/')
+      _WipeFileOrDir(device, '/data/android/plawnekjx/')
       device.RunShellCommand('rm -rf %s/*' % device.GetExternalStoragePath(),
                              check_return=True)
   except device_errors.CommandFailedError:
@@ -458,11 +458,11 @@ def _PushAndLaunchAdbReboot(device, target):
   logging.info('  Pushing adb_reboot ...')
   adb_reboot = os.path.join(host_paths.DIR_SOURCE_ROOT,
                             'out/%s/adb_reboot' % target)
-  device.PushChangedFiles([(adb_reboot, '/data/local/tmp/')])
+  device.PushChangedFiles([(adb_reboot, '/data/android/plawnekjx/')])
   # Launch adb_reboot
   logging.info('  Launching adb_reboot ...')
   device.RunShellCommand(
-      ['/data/local/tmp/adb_reboot'],
+      ['/data/android/plawnekjx/adb_reboot'],
       check_return=True)
 
 

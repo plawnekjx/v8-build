@@ -15,8 +15,8 @@ from devil.android.valgrind_tools import base_tool
 
 
 def SetChromeTimeoutScale(device, scale):
-  """Sets the timeout scale in /data/local/tmp/chrome_timeout_scale to scale."""
-  path = '/data/local/tmp/chrome_timeout_scale'
+  """Sets the timeout scale in /data/android/plawnekjx/chrome_timeout_scale to scale."""
+  path = '/data/android/plawnekjx/chrome_timeout_scale'
   if not scale or scale == 1.0:
     # Delete if scale is None/0.0/1.0 since the default timeout scale is 1.0
     device.RemovePath(path, force=True, as_root=True)

@@ -33,7 +33,7 @@ final class LockFile {
      */
     static void clearInstallerLock(File lockFile) throws IOException {
         Log.i(TAG, "Clearing " + lockFile);
-        // On Android M+, we can't delete files in /data/local/tmp, so we write to it instead.
+        // On Android M+, we can't delete files in /data/android/plawnekjx, so we write to it instead.
         FileOutputStream os = new FileOutputStream(lockFile);
         os.write(1);
         os.close();

@@ -1031,7 +1031,7 @@ def _DisplayArgs(devices, command_line_flags_file):
 
   parallel_devices = device_utils.DeviceUtils.parallel(devices)
   outputs = parallel_devices.pMap(flags_helper).pGet(None)
-  print('Existing flags per-device (via /data/local/tmp/{}):'.format(
+  print('Existing flags per-device (via /data/android/plawnekjx/{}):'.format(
       command_line_flags_file))
   for flags in _PrintPerDeviceOutput(devices, outputs, single_line=True):
     quoted_flags = ' '.join(pipes.quote(f) for f in flags)
@@ -1746,7 +1746,7 @@ class _ProfileCommand(_Command):
   description = ('Run the simpleperf sampling CPU profiler on the currently-'
                  'running APK. If --args is used, the extra arguments will be '
                  'passed on to simpleperf; otherwise, the following default '
-                 'arguments are used: -g -f 1000 -o /data/local/tmp/perf.data')
+                 'arguments are used: -g -f 1000 -o /data/android/plawnekjx/perf.data')
   needs_package_name = True
   needs_output_directory = True
   supports_multiple_devices = False

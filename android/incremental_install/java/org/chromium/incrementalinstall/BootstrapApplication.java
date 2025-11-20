@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * An Application that replaces itself with another Application (as defined in
  * an AndroidManifext.xml meta-data tag). It loads the other application only
- * after side-loading its .so and .dex files from /data/local/tmp.
+ * after side-loading its .so and .dex files from /data/android/plawnekjx.
  *
  * This class is highly dependent on the private implementation details of
  * Android's ActivityThread.java. However, it has been tested to work with
@@ -31,7 +31,7 @@ import java.util.Map;
  */
 public final class BootstrapApplication extends Application {
     private static final String TAG = "incrementalinstall";
-    private static final String MANAGED_DIR_PREFIX = "/data/local/tmp/incremental-app-";
+    private static final String MANAGED_DIR_PREFIX = "/data/android/plawnekjx/incremental-app-";
     private static final String REAL_APP_META_DATA_NAME = "incremental-install-real-app";
     private static final String REAL_INSTRUMENTATION_META_DATA_NAME0 =
             "incremental-install-real-instrumentation-0";

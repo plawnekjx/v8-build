@@ -99,7 +99,7 @@ TEST_SEARCH_BY_IMAGE_SERVER_PORT = 9041
 TEST_POLICY_SERVER_PORT = 9051
 
 
-TEST_EXECUTABLE_DIR = '/data/local/tmp'
+TEST_EXECUTABLE_DIR = '/data/android/plawnekjx'
 # Directories for common java libraries for SDK build.
 # These constants are defined in build/android/ant/common.xml
 SDK_BUILD_JAVALIB_DIR = 'lib.java'

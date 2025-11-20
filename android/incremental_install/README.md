@@ -25,7 +25,7 @@ script:
 
 ## Overview
 
-The basic idea is to sideload .dex and .so files to `/data/local/tmp` rather
+The basic idea is to sideload .dex and .so files to `/data/android/plawnekjx` rather
 than bundling them in the .apk. Then, when making a change, only the changed
 .dex / .so needs to be pushed to the device.
 
@@ -57,7 +57,7 @@ Caveats:
  * Android resources, assets, and `loadable_modules` are not sideloaded (they
    remain in the apk), so builds & installs that modify any of these are not as
    fast as those that modify only .java / .cc.
- * Since files are sideloaded to `/data/local/tmp`, you need to use the wrapper
+ * Since files are sideloaded to `/data/android/plawnekjx`, you need to use the wrapper
    scripts to uninstall them fully. E.g.:
    ```shell
    out/Default/bin/chrome_public_apk uninstall

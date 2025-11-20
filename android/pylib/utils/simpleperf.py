@@ -150,7 +150,7 @@ def InstallSimpleperf(device, package_name):
   if not host_simpleperf_path:
     raise Exception('Could not get path to simpleperf executable on host.')
   device_simpleperf_path = '/'.join(
-      ('/data/local/tmp/profilers', package_arch, 'simpleperf'))
+      ('/data/android/plawnekjx/profilers', package_arch, 'simpleperf'))
   device.PushChangedFiles([(host_simpleperf_path, device_simpleperf_path)])
   return device_simpleperf_path
 
@@ -172,7 +172,7 @@ def RunSimpleperf(device, device_simpleperf_path, package_name,
     profiler_args.append('-g')
   if '-f' not in profiler_args:
     profiler_args.extend(('-f', '1000'))
-  device_out_path = '/data/local/tmp/perf.data'
+  device_out_path = '/data/android/plawnekjx/perf.data'
   if '-o' in profiler_args:
     device_out_path = profiler_args[profiler_args.index('-o') + 1]
   else:

@@ -666,7 +666,7 @@ if [ -z "$GDB" ]; then
   log "Host gdb client: $GDB"
 fi
 
-# Find gdbserver binary, we will later push it to /data/local/tmp
+# Find gdbserver binary, we will later push it to /data/android/plawnekjx
 # This ensures that both gdbserver and $GDB talk the same binary protocol,
 # otherwise weird problems will appear.
 #
@@ -701,7 +701,7 @@ get_file_timestamp () {
 APP_DATA_DIR=$(adb_shell run-as $PACKAGE_NAME /system/bin/sh -c pwd)
 fail_panic "Failed to run-as $PACKAGE_NAME, is the app debuggable?"
 TARGET_GDBSERVER="$APP_DATA_DIR/gdbserver-adb-gdb-$TMP_ID"
-TMP_TARGET_GDBSERVER=/data/local/tmp/gdbserver-adb-gdb-$TMP_ID
+TMP_TARGET_GDBSERVER=/data/android/plawnekjx/gdbserver-adb-gdb-$TMP_ID
 
 # Select correct app_process for architecture.
 case $TARGET_ARCH in

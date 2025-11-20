@@ -59,7 +59,7 @@ final class ClassLoaderPatcher {
         if (isAtLeastOreo) {
             // In O, optimizedDirectory is ignored, and the files are always put in an "oat"
             // directory that is a sibling to the dex files themselves. SELinux policies
-            // prevent using odex files from /data/local/tmp, so we must first copy them
+            // prevent using odex files from /data/android/plawnekjx, so we must first copy them
             // into the app's data directory in order to get the odex files to live there.
             // Use a package-name subdirectory to prevent name collisions when apk-under-test is
             // used.
@@ -70,7 +70,7 @@ final class ClassLoaderPatcher {
             dexDir = newDexDir;
         } else {
             // The optimized dex files will be owned by this process' user.
-            // Store them within the app's data dir rather than on /data/local/tmp
+            // Store them within the app's data dir rather than on /data/android/plawnekjx
             // so that they are still deleted (by the OS) when we uninstall
             // (even on a non-rooted device).
             File incrementalDexesDir = new File(mAppFilesSubDir, "optimized-dexes");

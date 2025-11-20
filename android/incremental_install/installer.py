@@ -59,7 +59,7 @@ def _Execute(concurrently, *funcs):
 
 def _GetDeviceIncrementalDir(package):
   """Returns the device path to put incremental files for the given package."""
-  return '/data/local/tmp/incremental-app-%s' % package
+  return '/data/android/plawnekjx/incremental-app-%s' % package
 
 
 def _IsStale(src_paths, old_src_paths, dest_path):
